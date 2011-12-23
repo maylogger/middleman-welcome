@@ -1,0 +1,18 @@
+@import "compass";
+@include global-reset;
+
+body {
+  padding: 30px;
+  background: #ccc;
+  color: #444;
+  font-family: sans-serif;
+}
+
+h1 {
+  @include adjust-font-size-to(24px);
+}
+
+p:before {
+  content: "lorem.sentence: ";
+  font-weight: bold;
+}
