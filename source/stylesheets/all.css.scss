@@ -3,25 +3,35 @@
 
 body {
   background: #d4d4d4 image-url("background.png");
-  color: #999;
   text-align: center;
 }
 
 h1 {
+  color: rgba( black, .3 );
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
   @include adjust-font-size-to(32px);
   letter-spacing: -1px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba( white, .3 );
-  padding-top: 350px;
+  text-shadow: 0 1px 0 rgba( white, .5 );
+  padding: 350px 0 10px;
   background: image-url("middleman.png") no-repeat center 100px;
 }
 
-a {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  @include adjust-font-size-to(15px);
-  @include link-colors(#888, #666);
+.doc {
+  font-family: Georgia, serif;
+  @include adjust-font-size-to(16px);
+  &:before,
+  &:after {
+    opacity: .2;
+    content: "•";
+    padding: 12px;
+    font-style: normal;
+    position: relative;
+  }
+  a {
+    @include link-colors( rgba( black, .3 ) , #666);
+  }
 }
 
 @import "animate";
